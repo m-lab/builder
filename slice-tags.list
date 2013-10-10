@@ -5,5 +5,5 @@
 1.0-10.mlab         https://github.com/m-lab-tools/mobiperf-support.git     michigan_1
 19.08.2010-17.mlab  https://github.com/m-lab-tools/glasnost-support.git     mpisws_broadband
 0.4.15.7-6.mlab     https://github.com/m-lab-tools/neubot-support.git       mlab_neubot
-1.0-39.mlab         https://github.com/m-lab-tools/utility-support.git      mlab_utility
+1.0-44.mlab         https://github.com/m-lab-tools/utility-support.git      mlab_utility
 #0.9.1-41.mlab       https://github.com/m-lab-tools/ooni-support.git         mlab_ooni
