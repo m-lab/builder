@@ -1,9 +1,8 @@
 # <tag/branch>       <repo-url>  <slicename>
-3.6.5.2-60.mlab     https://github.com/m-lab-tools/ndt-support.git          iupui_ndt
-1.5.7.pre1-45.mlab  https://github.com/m-lab-tools/npad-support.git         iupui_npad
-3-11.mlab           https://github.com/m-lab-tools/shaperprobe-support.git  gt_partha 
-1.0-10.mlab         https://github.com/m-lab-tools/mobiperf-support.git     michigan_1
-19.08.2010-17.mlab  https://github.com/m-lab-tools/glasnost-support.git     mpisws_broadband
-0.4.15.7-6.mlab     https://github.com/m-lab-tools/neubot-support.git       mlab_neubot
-1.0-47.mlab         https://github.com/m-lab-tools/utility-support.git      mlab_utility
-#0.9.1-41.mlab       https://github.com/m-lab-tools/ooni-support.git         mlab_ooni
+3.7.0-112.mlab      https://github.com/m-lab/ndt-support.git          iupui_ndt
+1.5.7.pre1-56.mlab  https://github.com/m-lab/npad-support.git         iupui_npad
+1.0-18.mlab         https://github.com/m-lab/mobiperf-support.git     michigan_1
+20.02.2014-21.mlab  https://github.com/m-lab/glasnost-support.git     mpisws_broadband
+0.4.16.9-2.mlab     https://github.com/m-lab/neubot-support.git       mlab_neubot
+1.0-58.mlab         https://github.com/m-lab/utility-support.git      mlab_utility
+1.0.0-189.mlab      https://github.com/m-lab/ooni-support.git         mlab_ooni
