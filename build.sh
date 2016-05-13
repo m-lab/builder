@@ -24,7 +24,7 @@ while read slicetag repo slicename ; do
 
     # NOTE: set slice-specific source & build dirs
     export SOURCE_DIR=$PWD/$slicename
-    export BUILD_DIR=$HOME/$slicename
+    export BUILD_DIR=/home/$slicename
 
     pushd $SOURCE_DIR
         # NOTE: checkout the specific slicetag
