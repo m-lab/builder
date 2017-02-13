@@ -10,7 +10,7 @@ To build the docker image and tag it as m-lab/builder
 
 ### Running the build environment
 
-    docker run m-lab/builder
+    docker run -it m-lab/builder
 
 
 ##builder.sh
