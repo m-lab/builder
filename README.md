@@ -1,5 +1,19 @@
-builder
---------
+# MLAB slice building tools
+
+## Docker based build environment
+Docker file for creating mlab builder images.
+
+### Building
+To build the docker image and tag it as foo/bar
+
+    docker build https://github.com/foo/build-env .
+
+### Running the build environment
+
+    docker run foo/build-env
+
+
+##builder.sh
 
 Simple build script and tag list for creating slice packages.
 
@@ -16,3 +30,4 @@ To build all packages, run:
 To build a single package, specifiy the name of the slice:
 
     ./build.sh iupui_ndt
+
