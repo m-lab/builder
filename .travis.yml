@@ -1,0 +1,36 @@
+dist: trusty
+language: ruby
+services:
+- docker
+script:
+- docker build -t $TARGET_IMAGE:$TRAVIS_COMMIT .
+- docker inspect $TARGET_IMAGE:$TRAVIS_COMMIT
+- docker run $TARGET_IMAGE:$TRAVIS_COMMIT /root/ndt_build_and_test.sh
+after_success:
+- docker tag $TARGET_IMAGE:$TRAVIS_COMMIT $TARGET_IMAGE:travis-$TRAVIS_BUILD_NUMBER
+deploy:
+- provider: script
+  script: $TRAVIS_BUILD_DIR/travis/deploy_image.sh $TARGET_IMAGE latest
+  skip_cleanup: true
+  on:
+    repo: m-lab/mlab-builder
+    branch: master
+- provider: script
+  script: $TRAVIS_BUILD_DIR/travis/deploy_image.sh $TARGET_IMAGE $TRAVIS_BRANCH
+  skip_cleanup: true
+  on:
+    repo: m-lab/mlab-builder
+    all_branches: true
+    condition: ($TRAVIS_BRANCH != master)
+- provider: script
+  script: $TRAVIS_BUILD_DIR/travis/deploy_image.sh $TRAVIS_REPO_SLUG $TRAVIS_BRANCH
+  skip_cleanup: true
+  on:
+    all_branches: true
+    condition: ($TRAVIS_REPO_SLUG != m-lab/mlab-builder)
+env:
+  global:
+  - TARGET_IMAGE=measurementlab/ndt-builder
+  - COMMIT=${TRAVIS_COMMIT::8}
+  - secure: TAMIqN/kTsJCp38Riu9e9cShXsP9Jj9JQvX/weqiasm3BhXgn7pIECyoc+MxdapYEBwSf6b2fgAie31OiHNdPCAzLwosCFr+TNSPU4QLUgBgeXoLkDkJlAeIAxYUytdXdOJhKAA+zcYbaKT2JQ1xCKHSY7EHHDAKP62vP1f4K6I=
+  - secure: ZlBhMbXrKctTgyFOr7T5hluC6TD7bwOdsmCdMhw+nTSuV+5JG4k7SCAdtnwzZkjn7BsXb9X6HKQZwFflkDOycUplQv7iiKU3I03C9Aga10A27CUTJ8uKiMxqny/d8l2H6rXQVvkU+iVRABpgh0Z0b7Gx7Mp2O7SyzMrwRaZmiFg=
