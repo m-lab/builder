@@ -4,13 +4,13 @@
 Docker file for creating mlab builder images.
 
 ### Building
-To build the docker image and tag it as foo/bar
+To build the docker image and tag it as m-lab/builder
 
-    docker build https://github.com/foo/build-env .
+    docker build -t m-lab/builder .
 
 ### Running the build environment
 
-    docker run foo/build-env
+    docker run m-lab/builder
 
 
 ##builder.sh
