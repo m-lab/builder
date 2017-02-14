@@ -1,0 +1,8 @@
+dist: trusty
+language: ruby
+services:
+- docker
+script:
+- docker build -t $TARGET_IMAGE .
+- docker inspect $TARGET_IMAGE
+- docker run $TARGET_IMAGE /root/ndt_build_and_test.sh
