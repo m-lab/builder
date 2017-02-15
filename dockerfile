@@ -10,8 +10,15 @@ RUN linux32 rpm -ivh http://download.fedoraproject.org/pub/epel/6/i386/epel-rele
 RUN linux32 yum install -y --nogpgcheck jansson-devel
 RUN linux32 yum install -y nodejs npm --enablerepo=epel
 
-ADD build.sh /root/builder
-ADD slice-tags.list /root/builder
+# These items used to be loaded through git into builder directory, so we
+# copy them into the builder directory.
+ADD build.sh /root/builder/
+ADD slice-tags.list /root/builder/
+
+# These are utility scripts that may be run directly from the docker command
+# line, e.g.
+#    docker run -v `pwd`/ndt:/root/ndt m-lab/builder /root/ndt_build_and_test.sh 
+ADD scripts /root/
 
 # You'll want to run this docker with -ti, otherwise it just exits.
 
