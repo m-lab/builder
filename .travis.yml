@@ -3,6 +3,8 @@ language: ruby
 services:
 - docker
 script:
-- docker build -t $TARGET_IMAGE .
-- docker inspect $TARGET_IMAGE
-- docker run $TARGET_IMAGE /root/ndt_build_and_test.sh
+- docker build -t m-lab/builder .
+- docker inspect m-lab/builder 
+
+# Build and run NDT tests as e2e sanity check
+- docker run m-lab/builder /root/ndt_build_and_test.sh

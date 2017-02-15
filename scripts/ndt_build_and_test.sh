@@ -3,10 +3,11 @@ set -x
 set -e
 
 # Use a clean directory, so that we can mount it from docker run and
-# have access to the finished product.
+# have access to the finished product, when required.
 mkdir ~/ndt; cd ~/ndt; cp ~/builder/slice-tags.list .
 DISABLE_APPLET_SIGNING=1 ~/builder/build.sh iupui_ndt
 
+# Run basic unit tests that don't require web100.
 LD_LIBRARY_PATH=/home/iupui_ndt/build/lib NDT_HOSTNAME=localhost \
 ./iupui_ndt/ndt-3.7.0.1/src/web100_testoptions_unit_tests
 

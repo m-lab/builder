@@ -37,4 +37,3 @@ To build all packages, run:
 To build a single package, specifiy the name of the slice:
 
     ./build.sh iupui_ndt
-
