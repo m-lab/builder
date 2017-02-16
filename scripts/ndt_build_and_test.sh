@@ -15,6 +15,7 @@ LD_LIBRARY_PATH=/home/iupui_ndt/build/lib NDT_HOSTNAME=localhost \
 ./iupui_ndt/ndt-3.7.0.1/src/web100_websocket_unit_tests
 
 # This test doesn't currently work on travis because it requires
-# web100 patched kernel.
+# web100 patched kernel.  When we no longer have disabled tests, we
+# should just use "make check" to run all the tests.
 # LD_LIBRARY_PATH=/home/iupui_ndt/build/lib NDT_HOSTNAME=localhost \
 # ~/builder/iupui_ndt/ndt-3.7.0.1/src/web100srv_unit_tests
