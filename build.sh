@@ -12,7 +12,7 @@ while read slicetag repo slicename ; do
         continue
     fi
 
-    # TODO - better way to locate build_one.sh
-    ~/builder/build_one.sh $repo $slicetag $slicename
+    builddir=$( dirname "${BASH_SOURCE[0]}" )
+    $builddir/build_one.sh $repo $slicetag $slicename
 done
 
