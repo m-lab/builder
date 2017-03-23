@@ -1,5 +1,11 @@
 # MLAB slice building tools
 
+| branch | travis-ci | coveralls |
+|--------|-----------|-----------|
+| master | [![Travis Build Status](https://travis-ci.org/m-lab/builder.svg?branch=master)](https://travis-ci.org/m-lab/builder) | [![Coverage Status](https://coveralls.io/repos/m-lab/builder/badge.svg?branch=master)](https://coveralls.io/github/m-lab/builder?branch=master) |
+| dev | [![Travis Build Status](https://travis-ci.org/m-lab/builder.svg?branch=dev)](https://travis-ci.org/m-lab/builder) | [![Coverage Status](https://coveralls.io/repos/m-lab/builder/badge.svg?branch=dev)](https://coveralls.io/github/m-lab/builder?branch=dev) |
+
+
 ## Docker based build environment
 Docker file for creating mlab builder images.
 
@@ -24,7 +30,7 @@ volume on the host for either or both /root/ndt or /home/iupui_ndt.
 
 Simple build script and tag list for creating slice packages.
 
-The slice-tags.list contains a list of triples: 
+The slice-tags.list contains a list of triples:
 
     tag_name git_repository_url slice_name
 
