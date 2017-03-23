@@ -1,11 +1,10 @@
 # <tag/branch>       <repo-url>  <slicename>
 # NOTE: This file is ignored when building ndt using new build container.
-4.0.0.1-201611171214.mlab     https://github.com/m-lab/ndt-support.git          iupui_ndt
-1.5.7.pre1-201702141214.mlab  https://github.com/m-lab/npad-support.git         iupui_npad
-1.0-18.mlab                   https://github.com/m-lab/mobiperf-support.git     michigan_1
-20.02.2014-21.mlab            https://github.com/m-lab/glasnost-support.git     mpisws_broadband
-0.6.0.5-201701171515.mlab     https://github.com/m-lab/neubot-support.git       mlab_neubot
-1.5-201606091715.mlab         https://github.com/m-lab/utility-support.git      mlab_utility
-#1.0-58.mlab                  https://github.com/m-lab/utility-support.git      mlab_utility
-1.0.0-189.mlab                https://github.com/m-lab/ooni-support.git         mlab_ooni
+4.0.0.1-201611171214.mlab    https://github.com/m-lab/ndt-support.git      iupui_ndt
+1.5.7.pre1-201702141214.mlab https://github.com/m-lab/npad-support.git     iupui_npad
+1.0-18.mlab                  https://github.com/m-lab/mobiperf-support.git michigan_1
+20.02.2014-21.mlab           https://github.com/m-lab/glasnost-support.git mpisws_broadband
+0.6.0.5-201701171515.mlab    https://github.com/m-lab/neubot-support.git   mlab_neubot
+1.5-201606091715.mlab        https://github.com/m-lab/utility-support.git  mlab_utility
+1.0.0-189.mlab               https://github.com/m-lab/ooni-support.git     mlab_ooni
 
