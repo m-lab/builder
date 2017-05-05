@@ -11,11 +11,8 @@ RUN linux32 yum install -y --nogpgcheck jansson-devel
 RUN linux32 yum install -y nodejs npm --enablerepo=epel
 RUN linux32 yum install -y sudo man
 
-# These items used to be loaded through git into builder directory, so we
-# copy them into the builder directory.
-ADD build.sh /root/builder/
-ADD build_one.sh /root/builder/
-ADD slice-tags.list /root/builder/
+# Clone the builder repository into /root/builder
+RUN git clone https://github.com/m-lab/builder.git /root/builder
 
 # These are utility scripts that may be run directly from the docker command
 # line, e.g.
