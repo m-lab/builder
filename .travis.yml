@@ -7,6 +7,4 @@ script:
 - docker inspect m-lab/builder
 
 # Build and run NDT tests as e2e sanity check
-# Temporarily, this builds the dev branch, as a step to getting
-# everything working correctly.  Move to master asap.
-- docker run m-lab/builder /root/ndt_build_and_test.sh dev
+- docker run m-lab/builder /root/ndt_build_and_test.sh
