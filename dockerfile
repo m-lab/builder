@@ -3,7 +3,7 @@ LABEL vendor="measurement-lab" description="Docker for building 32 bit mlab slic
 
 RUN touch /var/lib/rpm/* && linux32 yum install -y yum-plugin-ovl
 RUN linux32 yum -y update
-RUN linux32 yum install -y wget git svn binutils qt gcc make patch libgomp
+RUN linux32 yum install -y wget git svn binutils qt gcc make patch libgomp golang
 RUN linux32 yum install -y glibc-headers glibc-devel kernel-headers kernel-devel htop dkms
 RUN linux32 yum install -y rpm-builder rpm-build m4 python-devel openssl-devel
 
