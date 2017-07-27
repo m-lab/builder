@@ -1,6 +1,7 @@
 FROM tenforward/centos-i386
 LABEL vendor="measurement-lab" description="Docker for building 32 bit mlab slices"
 
+RUN touch /var/lib/rpm/* && linux32 yum install -y yum-plugin-ovl
 RUN linux32 yum -y update
 RUN linux32 yum install -y wget git svn binutils qt gcc make patch libgomp
 RUN linux32 yum install -y glibc-headers glibc-devel kernel-headers kernel-devel htop dkms
